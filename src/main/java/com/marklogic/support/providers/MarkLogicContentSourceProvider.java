@@ -1,3 +1,5 @@
+package com.marklogic.support.providers;
+
 import com.marklogic.xcc.ContentSource;
 import com.marklogic.xcc.ContentSourceFactory;
 import com.marklogic.xcc.exceptions.XccConfigException;
@@ -47,7 +49,7 @@ public class MarkLogicContentSourceProvider {
 
     private String generateXdbcConnectionUri() {
         StringBuilder sb = new StringBuilder();
-        sb.append("xdbc://").append(user).append(":")
+        sb.append("xcc://").append(user).append(":")
                 .append(password).append("@")
                 .append(database).append(":")
                 .append(port);

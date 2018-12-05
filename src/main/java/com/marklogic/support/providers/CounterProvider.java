@@ -1,3 +1,5 @@
+package com.marklogic.support.providers;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 public class CounterProvider {

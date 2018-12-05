@@ -1,3 +1,9 @@
+package com.marklogic.support;
+
+import com.marklogic.support.jobs.CountRootNodes;
+import com.marklogic.support.jobs.Summary;
+import com.marklogic.support.jobs.UpdateTestXML;
+import com.marklogic.support.providers.CounterProvider;
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.Trigger;
@@ -16,7 +22,7 @@ import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 import static org.quartz.TriggerBuilder.newTrigger;
 
-public class DupRootNode {
+public class DuplicateRootNodeTest {
     private static Logger LOG = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     private static String readFile(String path, Charset encoding)
@@ -49,7 +55,7 @@ public class DupRootNode {
                 .withIdentity("trigger", "group")
                 .startNow()
                 .withSchedule(simpleSchedule()
-                        .withIntervalInMilliseconds(50)
+                        .withIntervalInMilliseconds(30)
                         .repeatForever())
                 .build();
 

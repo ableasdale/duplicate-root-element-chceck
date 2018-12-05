@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'DupRootNode'
+mainClassName = 'com.marklogic.support.DuplicateRootNodeTest'
 
 group 'duplicate-root-element-check'
 version '1.0-SNAPSHOT'

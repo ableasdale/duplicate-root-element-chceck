@@ -1,3 +1,6 @@
+package com.marklogic.support.jobs;
+
+import com.marklogic.support.providers.MarkLogicContentSourceProvider;
 import com.marklogic.xcc.Session;
 import com.marklogic.xcc.exceptions.RequestException;
 import org.quartz.Job;
