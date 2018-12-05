@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'DupRootNode'
+
+group 'duplicate-root-element-check'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://developer.marklogic.com/maven2"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile group: 'com.marklogic', name: 'marklogic-xcc', version: '8.0.6'
+    compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.0'
+    compile group: 'org.quartz-scheduler', name: 'quartz-jobs', version: '2.3.0'
+    compile group: 'org.apache.commons', name: 'commons-configuration2', version: '2.4'
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+
+}
+
